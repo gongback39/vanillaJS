@@ -11,7 +11,9 @@ hello gb39
 #### Variables(const and let)
 <code>const</code> doesn't change the value<br/>
 <code>let</code> can change the value<br/>
-we don't use <code>var</code> any more
+and when you what to upadate value you can just write <code>[variable] = [value]</code><br/>
+we don't use <code>var</code> any more<br/>
+always <code>const</code> sometimes <code>let</code> never <code>var</code>
 <pre><code>
 const a = 5;
 let MyName = jim;
@@ -98,3 +100,34 @@ add(3,4);
 ---
 hello jim how's the day
 7</code></pre>
+
+#### Others
+with th function <code>typeof</code> we can know the type of the value.<br/>
+and with <code>parseInt</code> we can change other datatype to int.<br/>
+if the value is text, the result would be NaN.
+<pre><code>const age = prompt("How old are you");
+
+console.log(typeof age, age, parseInt(age));
+---
+string 15(string) 15(int)</code></pre>
+
+<pre><code>const age = parseInt( prompt("How old are you"));
+
+console.log(typeof age, age);
+---
+int 15(int)</code></pre>
+
+#### conditional
+<pre><code>const age = parseInt( prompt("How old are you"));
+
+if (isNaN(age)){
+    console.log("please write a number"); // use isNaN() to check is age int.
+} else if (age < 18){
+    console.log("you are too young");
+} else if (age >=18 && age <=50){
+    console.log("You can drink");
+}else if (age >50 && age <80){
+    console.log("you should exercise");
+}else {
+    console.log("you can do whatever you want");
+}</code></pre>
